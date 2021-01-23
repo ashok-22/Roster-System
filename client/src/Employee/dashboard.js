@@ -94,7 +94,7 @@ class Dashboard extends React.Component{
                     draggable: true,
                     progress: undefined,
                     });
-                 this.componentDidMount();
+                
             }).catch(err=>{
                 
             })
