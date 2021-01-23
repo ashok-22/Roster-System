@@ -44,7 +44,8 @@ class Dashboard extends React.Component{
                     this.props.history.push('/error/unauthorized')
                 }
                 if(res.status==="200"){
-                toast.success(res.data.msg, {
+                this.setState({msg:res.data.msg})
+                toast.success(this.state.msg, {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -53,7 +54,7 @@ class Dashboard extends React.Component{
                     draggable: true,
                     progress: undefined,
                     });
-                 this.componentDidMount();
+                 
                 }
                 
             }).catch(err=>{
@@ -85,7 +86,8 @@ class Dashboard extends React.Component{
         if(token){
             Axios.delete(`http://localhost:4000/api/delete-leave?id=${id}`,{headers:{"Content-Type" : "application/json","authorization" : `Basic ${token}`}}
             ).then(res=>{
-                toast.error(res.data.msg, {
+                this.setState({msg:res.data.msg})
+                toast.error(this.state.msg, {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -101,6 +103,19 @@ class Dashboard extends React.Component{
         }
     }
 
+    componentDidUpdate(){
+        var token = localStorage.getItem('token');
+        Axios.get('http://localhost:4000/api/getleaves',{
+            headers:{
+                authorization : `Basic ${token}`
+            }
+        }).then(res=>{
+            console.log(res.data)
+               this.setState({"leaves":res.data})
+        }).catch(err=>{
+            this.props.history.push('/error/unauthorized')
+        })
+    }
 
     componentDidMount(){
         var token = localStorage.getItem('token');
