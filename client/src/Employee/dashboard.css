@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    
+}
+body{
+    background-color: #F7F7F7;
+}
+
+navbar{
+    box-shadow: 0px 2px 2px #e3e3e3;
+    background-color: #FFFFFF
+;
+}
+
+p,button,li,a{
+    font-family: "Lato",sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links .logo{
+    cursor: pointer;
+}
+
+.nav-links .title{
+    font-size:25px;
+}
+
+
+
+.nav-links li{
+    display: inline-block;
+    padding:0px 20px;
+}
+
+.nav-links li a:hover{
+    color: #4285F4
+}
+
+.nav-links li button{
+    padding: 6px 15px;
+    cursor: pointer;
+    background-color: #DCDCDC;
+    border:none;
+    border-radius: 10px;
+    
+}
+
+
+.leaves{
+    font-family:"Noto Sans TC";
+    padding:10px;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+
+.theader{
+    background-color: #008cd1;
+    color: aliceblue;
+    text-align: left;
+    padding: 5px;
+}
+th,td{
+    padding: 5px;
+    border-bottom: 1px solid black;
+    width: 120px;
+    
+}
+
+td button{
+    padding: 5px 10px;
+    background-color: #ff2a59;
+    border-radius: 20px;
+    color: white;
+    cursor:pointer;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    color:white;
+    font-family: "Oxygen";
+    font-weight: 600;
+    font-size:large;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    Padding:50px;
+}
+
+.infochild-1{
+    height: 100px;
+    width: 250px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+
+.infochild-2{
+    height: 100px;
+    width: 250px;
+    background-color: rgb(51, 223, 142);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+
+.infochild-3{
+    height: 100px;
+    width: 250px;
+    background-color: rgb(204, 16, 63);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+
+form{
+    font-family: "Lato",sans-serif;
+    font-weight: 600    ;
+}
+
