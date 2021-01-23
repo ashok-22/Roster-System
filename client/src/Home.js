@@ -27,7 +27,7 @@ class Home extends React.Component{
             </div>
         </main>
         <footer>
-            <p>Copyright 1999-2020 by Telstra. All Rights Reserved.</p>
+            <p>Copyright 1999-2021 by Telstra. All Rights Reserved.</p>
         </footer>
     </div>
     )
